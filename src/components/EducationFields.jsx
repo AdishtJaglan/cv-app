@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import InputField from "./InputField";
+import "../styles/EducationFields.css";
 
 export default function EducationFields({ formData, handleChange }) {
   return (

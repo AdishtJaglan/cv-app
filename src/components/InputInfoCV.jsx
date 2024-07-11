@@ -15,7 +15,6 @@ export default function InputInfoCV() {
     title: "",
     experience: "",
     role: "",
-    jobTitle: "",
     company: "",
     college: "",
     course: "",

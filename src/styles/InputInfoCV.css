@@ -10,4 +10,7 @@
   height: 90%;
   background-color: bisque;
   border-radius: 6px;
+
+  display: grid;
+  grid-template-rows: 1fr repeat(6, 1fr);
 }

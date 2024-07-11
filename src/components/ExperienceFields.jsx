@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import InputField from "./InputField";
+import "../styles/ExperienceFields.css";
 
 export default function ExperienceFields({ formData, handleChange }) {
   return (
@@ -10,12 +11,6 @@ export default function ExperienceFields({ formData, handleChange }) {
         value={formData.experience}
         onChange={handleChange}
         placeholder="Enter your experience"
-      />
-      <InputField
-        name="jobTitle"
-        value={formData.jobTitle}
-        onChange={handleChange}
-        placeholder="job title"
       />
       <InputField
         name="company"
