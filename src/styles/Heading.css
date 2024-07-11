@@ -1,0 +1,11 @@
+h1 {
+  font-size: 2em;
+  font-weight: 900;
+  padding: 12px;
+  width: 40%;
+  text-align: center;
+  margin-left: 4%;
+  background-color: #242424;
+  display: inline-block;
+  border-radius: 25px;
+}
