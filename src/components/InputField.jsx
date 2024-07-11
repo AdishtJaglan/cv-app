@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import "../styles/InputField.css";
 
 export default function InputField({
   label,
