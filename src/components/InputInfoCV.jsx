@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "../styles/InputInfoCV.css";
 import Heading from "./Heading";
 import PersonalFields from "./PersonalFields";
@@ -6,36 +7,8 @@ import EducationFields from "./EducationFields";
 import SkillFields from "./SkillFields";
 import ProjectFields from "./ProjectFields";
 import CertificationFields from "./CertificationFields";
-import { useState } from "react";
 
-export default function InputInfoCV() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    title: "",
-    experience: "",
-    role: "",
-    company: "",
-    college: "",
-    course: "",
-    duration: "",
-    backend: "",
-    frontend: "",
-    others: "",
-    project: "",
-    link: "",
-    certifications: "",
-    issuedBy: "",
-  });
-
-  const handleChange = (e) => {
-    const { value, name } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
+export default function InputInfoCV({ formData, handleChange }) {
   return (
     <div className="left-aside">
       <div className="cv-input-fields-container">

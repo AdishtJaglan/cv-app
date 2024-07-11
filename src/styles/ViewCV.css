@@ -1,13 +1,64 @@
 .right-aside {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 20px;
 }
 
 .cv-container {
-  width: 90%;
-  height: 90%;
-  background-color: #d9d9d9;
-  border-radius: 6px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.cv h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  width: 50%;
+  color: #333;
+}
+
+.cv h2 {
+  font-size: 1.5em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  color: #444;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.2em;
+}
+
+.cv p {
+  font-size: 1em;
+  margin: 0.5em 0;
+  color: #555;
+}
+
+.cv a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.cv a:hover {
+  text-decoration: underline;
+}
+
+.cv h2:first-of-type {
+  margin-top: 0;
+}
+
+.cv p:first-of-type {
+  margin-top: 0;
+}
+
+.cv h2 + p {
+  margin-top: 0.2em;
+}
+
+.cv h2:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.cv p:last-child {
+  margin-bottom: 0;
 }

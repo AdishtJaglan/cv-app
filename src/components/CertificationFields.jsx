@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import InputField from "./InputField";
-import "../styles/CertificationFields.css";
 
 export default function CertificationFields({ formData, handleChange }) {
   return (

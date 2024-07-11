@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import InputField from "./InputField";
-import "../styles/ProjectFields.css";
 
 export default function ProjectFields({ formData, handleChange }) {
   return (

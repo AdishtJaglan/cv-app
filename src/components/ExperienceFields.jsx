@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import InputField from "./InputField";
-import "../styles/ExperienceFields.css";
 
 export default function ExperienceFields({ formData, handleChange }) {
   return (

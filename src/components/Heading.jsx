@@ -1,5 +1,3 @@
-import "../styles/Heading.css";
-
 export default function Heading() {
-  return <h1>CV builder</h1>;
+  return <h1 className="input-cv-heading">CV builder</h1>;
 }

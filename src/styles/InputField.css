@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: self-start;
+  max-height: 60px;
 }
 
 .input-field label {
