@@ -1,7 +1,10 @@
 import "./App.css";
 import ViewCV from "./components/ViewCV";
 import InputInfoCV from "./components/InputInfoCV";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { useReactToPrint } from "react-to-print";
+import jsPDF from "jspdf";
+import html2canvas from "html2canvas";
 
 function App() {
   const [formData, setFormData] = useState({
@@ -31,14 +34,39 @@ function App() {
     });
   };
 
+  const componentRef = useRef();
+
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+    documentTitle: "CV",
+  });
+
+  const handleDownloadPdf = async () => {
+    const element = componentRef.current;
+    const canvas = await html2canvas(element);
+    const data = canvas.toDataURL("image/png");
+
+    const pdf = new jsPDF();
+    const imgProperties = pdf.getImageProperties(data);
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pdfHeight = (imgProperties.height * pdfWidth) / imgProperties.width;
+
+    pdf.addImage(data, "PNG", 0, 0, pdfWidth, pdfHeight);
+    pdf.save("CV.pdf");
+  };
+
   return (
     <>
+      <button onClick={handlePrint}>Print</button>
+      <button onClick={handleDownloadPdf}>Download as PDF</button>
       <InputInfoCV
         className="left-side"
         handleChange={handleChange}
         formData={formData}
       />
-      <ViewCV className="right-side" formData={formData} />
+      <div ref={componentRef}>
+        <ViewCV className="right-side" formData={formData} />
+      </div>
     </>
   );
 }
