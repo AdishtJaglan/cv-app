@@ -1,0 +1,13 @@
+.right-aside {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cv-container {
+  width: 90%;
+  height: 90%;
+  background-color: bisque;
+  border-radius: 6px;
+}

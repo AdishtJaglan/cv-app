@@ -1,9 +1,12 @@
 import "./App.css";
+import ViewCV from "./components/ViewCV";
+import InputInfoCV from "./components/InputInfoCV";
 
 function App() {
   return (
     <>
-      <h1>testing</h1>
+      <InputInfoCV className="left-side" />
+      <ViewCV className="right-side" />
     </>
   );
 }
